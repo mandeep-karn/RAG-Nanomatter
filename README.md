@@ -7,15 +7,10 @@ The NanoMatter Custom Retrieval-Augmented Generation (RAG) App is designed to en
 
 ## Features
 ### Current Features
-- **PDF Parsing**: Extracts information from PDF documents and generates responses using OpenAI's GPT-4.
+- **PDF Parsing**: Extracts information from PDF documents and generates responses using Hugging Face Open Source Model.
 - **Contextual Query Handling**: Provides accurate answers based on the contents of uploaded PDFs.
 
 ### Future Enhancements
-- **Expanded File Format Support**: Compatibility with:
-  - **.CSV**
-  - **.TXT**
-  - **.XLSX**
-  - **.DOCX**
   - Other common document formats
 - **AI Agent Integration**:
   - Enhanced conversational capabilities.
@@ -26,8 +21,8 @@ The NanoMatter Custom Retrieval-Augmented Generation (RAG) App is designed to en
 ---
 
 ## Technical Details
-- **Backend**: OpenAI's GPT-4 for natural language understanding and generation.
-- **Input Format**: PDF (current version).
+- **Backend**: Hugging Face Open source for natural language understanding and generation.
+- **Input Format**: PDF (current version), CSV, XLSX
 - **Output**: Text-based responses tailored to user queries.
 - **Frontend**: Stream-lit based UI
 
