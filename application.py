@@ -61,18 +61,20 @@ def log_email(email):
         return False
 
 class UnifiedRAG:
-    def __init__(self):
-        # Initialize HuggingFace model and embeddings
-        self.llm = HuggingFaceHub(
-            repo_id="google/flan-t5-large",
-            model_kwargs={"temperature": 0.1, "max_length": 512}
-        )
-        self.embeddings = HuggingFaceEmbeddings(
-            model_name="sentence-transformers/all-mpnet-base-v2"
-        )
-        self.vector_store = None
+   def __init__(self):
+    # Initialize HuggingFace model and embeddings
+    self.llm = HuggingFaceHub(
+        repo_id="google/flan-t5-large",
+        model_kwargs={"temperature": 0.1, "max_length": 512}
+    )
+    self.embeddings = HuggingFaceEmbeddings(
+        model_name="sentence-transformers/all-mpnet-base-v2"
+    )
+    self.vector_store = None
 
     def process_pdf(self, pdf_file):
+        if not pdf_file:
+            return 0
         try:
             temp_pdf_path = f"temp_{uuid.uuid4()}.pdf"
             with open(temp_pdf_path, "wb") as f:
